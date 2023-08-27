@@ -53,10 +53,12 @@ require("mason-lspconfig").setup_handlers({
         require('lspconfig').lua_ls.setup {
             on_attach = on_attach,
             capabilities = capabilities,
-            Lua = {
-              workspace = { checkThirdParty = false },
-              telemetry = { enable = false },
-            },
+            settings = {
+                Lua = {
+                    workspace = { checkThirdParty = false },
+                    telemetry = { enable = false },
+                },
+            }
         }
     end
 
